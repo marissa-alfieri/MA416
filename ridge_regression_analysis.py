@@ -9,8 +9,11 @@ data = pd.read_csv("CompanyPayroll_9.25.csv")
 Y = data['Efficiency_Factor_Obs'].values
 X1 = data[' Hourly_Wage '].values  # Note: column name has spaces
 
-# Create design matrix with cubic terms (unscaled)
-X = np.column_stack([np.ones(len(X1)), X1, X1**2, X1**3])
+# SCALE the data first (important for ridge regression!)
+Z = (X1 - np.mean(X1)) / np.std(X1, ddof=1)
+
+# Create design matrix with cubic terms (SCALED)
+X = np.column_stack([np.ones(len(X1)), Z, Z**2, Z**3])
 
 p = X.shape[1] - 1  # number of predictors (excluding intercept)
 n = len(Y)
