@@ -47,19 +47,17 @@ RMSE_3 = sqrt(SSE / n)
 
 
 # question 3
-Z = scale(X1)              
-X = cbind(1, Z, Z^2, Z^3) 
+X = cbind(1, X1, X1^2, X1^3)
 p = ncol(X) - 1
 
-P = diag(c(0, 1, 1, 1))
+I = diag(4)
 L_vals = c(0, 5000, 100000, 400000, 900000)
 p_vals = numeric(length(L_vals))
 
 for (i in 1:length(L_vals)) {
   L = L_vals[i]
   
-  # ridge coefficients: (X'X + L P)^(-1) X'Y
-  beta_ridge = solve(t(X) %*% X + L * P) %*% (t(X) %*% Y)
+  beta_ridge = solve(t(X) %*% X + L * I) %*% (t(X) %*% Y)
   
   Y_hat = X %*% beta_ridge
   res   = Y - Y_hat
