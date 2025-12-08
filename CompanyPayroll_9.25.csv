@@ -1,0 +1,82 @@
+Employee_ID_No,First_Name,Last_Name,Age,Biological_Sex,Prior_Experience,Job_Rank,Efficiency_Factor_Obs, Hourly_Wage ,Hours_Worked,Pay_Amount
+1042,Katelyn,Sandoval,30,Female,1.92,Associate,2.5,19.87,20.48,406.93
+1095,Tracy,Huang,25,Female,1.11,Entry,1.5,25.13,6.31,158.57
+1119,Shaunna,Alfaro,24,Female,0.19,Entry,0.4,30.24,17.84,539.48
+1353,Denise,Portillo,27,Female,0.67,Entry,3.5,20.55,24.6,505.53
+1401,Andy,Webb,37,Male,1.12,Ast. Manager,4.7,24.29,42.35,1028.68
+1502,Herman,Riley,32,Male,0.63,Entry,0.9,22.13,20.25,448.13
+1526,Nathanial,Beasley,35,Male,1.51,Entry,4.7,32.52,18,585.36
+1592,Keziah,Duncan,20,Female,1,Ast. Manager,4.4,25.76,16.85,434.05
+1637,Macy,Watson,38,Female,0.57,Ast. Manager,5.5,29.89,40.89,1222.2
+1874,Zidan,Mair,25,Male,1.09,Entry,1,18.57,18.54,344.28
+1903,Blair,Bradford,21,Female,1.47,Entry,2.2,31.97,15.46,494.25
+1909,Theon,Buck,31,Male,2.05,Associate,0.6,32.91,25.71,846.11
+2026,Aria,Ewing,36,Female,1.77,Ast. Manager,7.7,29.02,41.83,1213.9
+2176,Willow,Weeks,21,Male,0.18,Associate,0.1,34.28,13.49,462.43
+2259,Aoife,Cunningham,35,Female,1.9,Ast. Manager,4,32.04,44.08,1412.32
+2262,Cassandra,Burch,32,Female,0.42,Entry,1.9,29.87,27.98,835.76
+2265,Lesley,Haines,20,Female,1.1,Entry,1.2,22.85,16.29,372.22
+2622,Christopher,Morales,28,Male,1.96,Entry,1.7,19.11,17.83,340.73
+2754,Clifton,Solis,26,Male,1.21,Entry,6.1,25.64,25.46,652.79
+2892,Adrian,Parrish,29,Male,1.34,Entry,6.8,27.89,26.79,747.17
+3011,Abraham,Riggs,27,Male,1.81,Entry,5.1,24.51,31.23,765.44
+3078,Carmen,Bond,29,Female,1.52,Entry,2.8,16.34,26.26,429.08
+3198,Hamaad,Rose,34,Male,1.65,Entry,1.1,19.46,25.68,499.73
+3287,Dianne,Bewer,27,Female,0.79,Entry,3.1,33.17,26.55,880.66
+3324,Margie,Chase,32,Female,0.58,Ast. Manager,6,34.12,47.14,1608.41
+3621,Tommie,Drummond,33,Male,1.78,Associate,2.3,17.72,43.69,774.18
+3704,Darin,Compton,35,Male,1.82,Associate,2.5,24.85,26.45,657.28
+4012,Coco,Wolfe,20,Female,1.25,Associate,1.8,19.06,14.23,271.22
+4290,Jadon,Tran,23,Male,1.67,Associate,3.7,35.35,13.56,479.34
+4317,Samia,McLellan,36,Female,2.43,Associate,3,18.45,22.76,419.92
+4354,Leslie,Villegas,32,Female,0.64,Entry,0.8,30.45,36.51,1111.72
+4396,Nettie,Terry,30,Female,1.77,Entry,4.6,29.38,37.41,1099.1
+4417,Michelle,Compton,31,Female,0.93,Entry,2.3,25.76,28.74,740.34
+4579,Reeva,Stephenson,22,Female,1.73,Entry,3.6,18.74,14.79,277.16
+4827,Ravinder,Farmer,30,Male,2.17,Associate,1.7,28.04,38.35,1075.33
+4961,Doris,Gates,31,Female,1.42,Associate,4.4,18.47,20.61,380.66
+4977,Catrin,Hayes,27,Male,0.7,Entry,1.7,20.13,25.64,516.13
+4981,Kasim,Hackett,30,Male,1.45,Ast. Manager,6.5,29.78,53.92,1605.73
+5490,Ronald,Mercer,35,Male,2.31,Associate,4.1,14.26,36.73,523.76
+5596,Raife,Coffey,20,Male,0.5,Ast. Manager,6.5,30.48,12.78,389.53
+5711,Aryan,Vance,24,Male,1.32,Entry,2.7,14.86,15.89,236.12
+5854,Lillie,Lim,28,Female,0.95,Entry,2,18.57,18.54,344.28
+5865,Selin,Ford,22,Male,0.1,Associate,5.3,18.96,15.22,288.57
+5884,Shelbie,Best,29,Female,2.24,Entry,0.9,18.5,17.33,320.6
+6746,Kiaan,Watt,21,Male,0.49,Ast. Manager,3.8,28.42,22.82,648.54
+6843,Brittany,Wilkinson,23,Female,0.8,Entry,1.7,22.21,15.26,338.92
+7185,Hakeem,Christian,35,Male,1.43,Entry,4.7,24.14,42.25,1019.91
+7205,Jorgie,Haworth,34,Female,1.3,Associate,0.1,18.36,21.76,399.51
+7294,Polly,Halliday,31,Female,1.25,Entry,3.9,19.85,23.79,472.23
+7297,Pete,Waller,24,Male,0.29,Entry,0.3,20.11,15.64,314.52
+7302,Kerri,Valenzuela,29,Female,0.47,Entry,3.4,21.78,27.94,608.53
+7313,Lewis,Espinosa,34,Male,1.61,Ast. Manager,3,36.78,23.68,870.95
+7458,Dorian,Boyd,38,Male,2.99,Ast. Manager,4.6,27.2,53.44,1453.56
+7591,Sami,Chapman,31,Female,1.12,Ast. Manager,4.4,30.17,40.04,1208
+7602,Imaani,Yoder,28,Female,1.17,Entry,0.1,20.13,18.54,373.21
+7613,Mohamed,Hardin,23,Male,0.42,Entry,0.5,19.18,9.74,186.81
+7648,Trinity,Stanley,30,Female,0.62,Associate,2.7,19.05,24.97,475.67
+7651,Stanton,Sparks,25,Male,2.21,Entry,5.7,32.4,28.56,925.34
+7679,Iris,Morales,26,Male,1.95,Entry,6.4,28.4,27.41,778.44
+7685,Ayda,Leon,22,Female,1.51,Associate,1.5,16.36,21.41,350.26
+7816,Aleksandra,Walsh,26,Female,1.05,Associate,1.9,29.85,38.1,1137.28
+7968,Riyad,Morris,32,Male,2.07,Associate,4.9,31.16,40.54,1263.22
+7976,Chasity,Russell,31,Female,1.79,Entry,1.8,23.79,30.56,727.02
+7991,Ilyas,Kumar,28,Male,2.32,Entry,0.7,26.66,30,799.8
+8003,Leila,Raymond,30,Female,2.23,Entry,2.5,22.13,35.87,793.8
+8414,Tatiana,Conley,19,Female,0.94,Entry,2.8,24.2,8.06,195.05
+8547,Tiffany,Wood,25,Female,0.87,Entry,1.3,35.52,25.86,918.54
+8843,Michale,Duncan,29,Female,1.25,Entry,2.9,31.57,29.74,938.89
+8988,Jamal,Dickens,33,Male,1.16,Ast. Manager,5.1,29.78,43.71,1301.68
+9013,Curtis,Kane,24,Male,0.87,Entry,3.4,21.1,24.13,509.14
+9026,Hammad,Kendall,37,Male,1.26,Ast. Manager,5.9,32.14,41.22,1324.81
+9029,Cleveland,Peters,34,Male,0.9,Entry,5.4,32.51,30.21,982.12
+9141,Nathanial,Archer,37,Male,1.54,Entry,6.4,33.89,30.11,1020.42
+9357,Jeffrey,Suarez,35,Male,1.21,Entry,5.4,26.8,27.46,735.92
+9378,Coby,Villalobos,19,Male,0.51,Associate,0.7,22.02,12.5,275.25
+9399,Lana,Salazar,34,Female,1.3,Entry,1.4,26.11,37.85,988.26
+9451,Rhonda,McKenna,21,Female,0.53,Ast. Manager,4.9,33.18,18.79,623.45
+9510,Kady,Rosario,28,Female,0.5,Associate,3.4,27.8,33.31,926.01
+9685,Arham,Hail,37,Male,2.11,Entry,1.9,23.15,22.66,524.57
+9810,Hunter,Fellows,32,Male,1.36,Associate,4,31.45,28.79,905.44
+9874,Tony,White,22,Male,1.67,Entry,4.3,19.57,14.73,288.26
