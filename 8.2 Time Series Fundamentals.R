@@ -4,10 +4,10 @@
 # Q8:  5 subsets
 # Q9a: SSE = 15411.5708
 # Q9b: RMSE = 6.4980
-# Q10: 1/5
-# Q11a: Yma at t=7 = 105.6941
-# Q11b: Yma at t=23 = 114.2475
-# Q11c: Yma at t=79 = 105.7972
+# Q10: 1/6
+# Q11a: Yma at t=7 = 106.9567
+# Q11b: Yma at t=23 = 110.9639
+# Q11c: Yma at t=79 = 107.4489
 # Q12a: w0 = 0.4070
 # Q12b: w1 = 0.2768
 # Q12c: w2 = 0.1882
@@ -74,42 +74,47 @@ cat("Question 9b - RMSE:", round(RMSE, 4), "\n")
 
 # ============================================================================
 # Question 10: MA{5} weights
-# ANSWER: 1/5
+# ANSWER: 1/6
 # ============================================================================
-# For MA{5}, we use 5 points centered around the target point
-# MA{w} uses w points: (w-1)/2 before, the point itself, and (w-1)/2 after
-# For MA{5}: 2 before, current point, 2 after
-# Each point gets equal weight, so w_j = 1/5 for j = -2, -1, 0, 1, 2
+# For MA{w}, we use w+1 points in a TRAILING window
+# Formula: yhat_t = (y[t-w] + y[t-w+1] + ... + y[t-1] + y[t]) / (w+1)
+# For MA{5}: uses 6 points from t-5 to t
+# Each point gets equal weight: 1/6
 
-w_ma5 = 1/5
-cat("\nQuestion 10 - MA{5} weight for each point: 1/5\n")
+w_ma5 = 1/6
+cat("\nQuestion 10 - MA{5} weight for each point: 1/6\n")
 
 # ============================================================================
 # Question 11: MA{5} approximations at specific time points
-# ANSWER 11a: 105.6941
-# ANSWER 11b: 114.2475
-# ANSWER 11c: 105.7972
+# ANSWER 11a: 106.9567
+# ANSWER 11b: 110.9639
+# ANSWER 11c: 107.4489
 # ============================================================================
-# For MA{5}, the approximation at time t is the average of values at t-2, t-1, t, t+1, t+2
+# For MA{5}, the approximation at time t uses TRAILING window from t-5 to t (6 points)
+# Formula: yhat_t = (y[t-5] + y[t-4] + y[t-3] + y[t-2] + y[t-1] + y[t]) / 6
 
-# Function to calculate MA{5} approximation
-ma5_approx = function(data, t) {
-  if(t < 3 || t > length(data) - 2) {
-    return(NA)  # Can't calculate MA{5} at boundaries
+# Function to calculate MA{w} approximation
+ma_w_approx = function(data, t, w) {
+  if(t <= w) {
+    return(NA)  # Can't calculate MA{w} if t <= w
   }
-  return(mean(data[(t-2):(t+2)]))
+  # Use trailing window: from (t-w) to t, which is w+1 points
+  return(mean(data[(t-w):t]))
 }
 
+# For MA{5}, w=5
+w = 5
+
 # a) t = 7
-yma_7 = ma5_approx(mydata$Stock.Price, 7)
+yma_7 = ma_w_approx(mydata$Stock.Price, 7, w)
 cat("\nQuestion 11a - Yma at t=7:", round(yma_7, 4), "\n")
 
 # b) t = 23
-yma_23 = ma5_approx(mydata$Stock.Price, 23)
+yma_23 = ma_w_approx(mydata$Stock.Price, 23, w)
 cat("Question 11b - Yma at t=23:", round(yma_23, 4), "\n")
 
 # c) t = 79
-yma_79 = ma5_approx(mydata$Stock.Price, 79)
+yma_79 = ma_w_approx(mydata$Stock.Price, 79, w)
 cat("Question 11c - Yma at t=79:", round(yma_79, 4), "\n")
 
 # ============================================================================
