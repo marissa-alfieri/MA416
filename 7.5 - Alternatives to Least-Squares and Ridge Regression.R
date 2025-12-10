@@ -8,6 +8,7 @@ X1 = data$living_space_ft2
 X2 = data$home_age
 X3 = data$distance_city_mi
 X4 = data$crime_rate_index
+
 Xk = cbind(X1, X2, X3, X4)
 
 n = length(Y)
@@ -21,7 +22,7 @@ b_ols = myladlasso(Xk, Y, lam = 0, method = "ols")
 Yhat = X %*% b_ols
 res = Y - Yhat
 SSE = sum(res^2)
-RMSE_LS = sqrt(SSE / n)
+RMSE_LS = sqrt(SSE / (n - p - 1))
 SSR = SST - SSE
 F_LS = (SSR / p) / (SSE / (n - p - 1))
 
@@ -30,7 +31,7 @@ b_ridge = myladlasso(Xk, Y, lam = 15, method = "ridge")
 Yhat = X %*% b_ridge
 res = Y - Yhat
 SSE = sum(res^2)
-RMSE_RIDGE = sqrt(SSE / n)
+RMSE_RIDGE = sqrt(SSE / (n - p - 1))
 SSR = SST - SSE
 F_RIDGE = (SSR / p) / (SSE / (n - p - 1))
 
@@ -39,7 +40,7 @@ b_lad = myladlasso(Xk, Y, lam = 0, method = "lad")
 Yhat = X %*% b_lad
 res = Y - Yhat
 SSE = sum(res^2)
-RMSE_LAD = sqrt(SSE / n)
+RMSE_LAD = sqrt(SSE / (n - p - 1))
 SSR = SST - SSE
 F_LAD = (SSR / p) / (SSE / (n - p - 1))
 
@@ -49,7 +50,7 @@ b_lasso = myladlasso(Xk, Y, lam = 15, method = "lasso")
 Yhat = X %*% b_lasso
 res = Y - Yhat
 SSE = sum(res^2)
-RMSE_LASSO = sqrt(SSE / n)
+RMSE_LASSO = sqrt(SSE / (n - p - 1))
 SSR = SST - SSE
 F_LASSO = (SSR / p) / (SSE / (n - p - 1))
 
@@ -59,7 +60,7 @@ b_ladlasso = myladlasso(Xk, Y, lam = 15, method = "ladlasso")
 Yhat = X %*% b_ladlasso
 res = Y - Yhat
 SSE = sum(res^2)
-RMSE_LADLASSO = sqrt(SSE / n)
+RMSE_LADLASSO = sqrt(SSE / (n - p - 1))
 SSR = SST - SSE
 F_LADLASSO = (SSR / p) / (SSE / (n - p - 1))
 
