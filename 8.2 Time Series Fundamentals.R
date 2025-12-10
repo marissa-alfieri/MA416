@@ -8,11 +8,11 @@
 # Q11a: Yma at t=7 = 106.9567
 # Q11b: Yma at t=23 = 110.9639
 # Q11c: Yma at t=79 = 107.4489
-# Q12a: w0 = 0.4070
-# Q12b: w1 = 0.2768
-# Q12c: w2 = 0.1882
-# Q12d: w3 = 0.1280
-# Q13:  EMA approximation at t=35 = 114.1011
+# Q12a: w0 = 0.6873
+# Q12b: w1 = 0.2199
+# Q12c: w2 = 0.0704
+# Q12d: w3 = 0.0225
+# Q13:  EMA approximation at t=35 = 114.6908
 
 mydata = read.csv("StockMarketB_9.25.csv")
 
@@ -119,24 +119,22 @@ cat("Question 11c - Yma at t=79:", round(yma_79, 4), "\n")
 
 # ============================================================================
 # Question 12: EMA{3, 0.32} weights at t=35
-# ANSWER 12a: w0 = 0.4070
-# ANSWER 12b: w1 = 0.2768
-# ANSWER 12c: w2 = 0.1882
-# ANSWER 12d: w3 = 0.1280
+# ANSWER 12a: w0 = 0.6873
+# ANSWER 12b: w1 = 0.2199
+# ANSWER 12c: w2 = 0.0704
+# ANSWER 12d: w3 = 0.0225
 # ============================================================================
-# For EMA{w, a}, the weights follow an exponential decay pattern
-# w_0 = a
-# w_j = (1-a) * w_(j-1) for j = 1, 2, ..., w
-# Then normalize so they sum to 1
+# For EMA{w, a}, weights are: w_j = a^j / sum(a^k for k=0 to w)
+# This means: more recent values get HIGHER weight
 
 a = 0.32
 w = 3
 
-# Calculate unnormalized weights
-w0_unnorm = a
-w1_unnorm = (1 - a) * w0_unnorm
-w2_unnorm = (1 - a) * w1_unnorm
-w3_unnorm = (1 - a) * w2_unnorm
+# Calculate unnormalized weights using a^j
+w0_unnorm = a^0  # = 1.0
+w1_unnorm = a^1  # = 0.32
+w2_unnorm = a^2  # = 0.1024
+w3_unnorm = a^3  # = 0.032768
 
 # Normalize
 sum_weights = w0_unnorm + w1_unnorm + w2_unnorm + w3_unnorm
@@ -155,7 +153,7 @@ cat("Sum of weights:", round(w0_ema + w1_ema + w2_ema + w3_ema, 6), "\n")
 
 # ============================================================================
 # Question 13: EMA{3, 0.32} approximation at t=35
-# ANSWER: 114.1011
+# ANSWER: 114.6908
 # ============================================================================
 # EMA approximation = w0*y(t) + w1*y(t-1) + w2*y(t-2) + w3*y(t-3)
 
